@@ -9,14 +9,20 @@
 # g example go --> ./example/example.go
 # g examply py--> ./example/example.py
 # Makes test_example.py for pytesting
+
 if [ "$#" -ne 2 ]; then
-  echo "you forgot the filename or something"
+  echo "you forgot the file extension or something"
   exit 1
 fi
 
 if [ "$2" == "py" ]; then
-  mkdir $1 && cd $1 && touch ./test_$1.$2 && lvim ./$1.$2 || nvim ./$1.$2
+  mkdir $1
+  touch $1/test_$1.$2
+  touch $1/$1.$2
+  lvim $1/$1.$2 || nvim $1.$2
   else
-    mkdir $1 && cd $1 && lvim ./$1.$2 || nvim ./$1.$2
+    mkdir $1
+    touch $1.$2
+    lvim $1.$2 || nvim $1.$2
 fi
 
