@@ -19,10 +19,10 @@ if [ "$2" == "py" ]; then
   mkdir $1
   touch $1/test_$1.$2
   touch $1/$1.$2
-  lvim $1/$1.$2 || nvim $1.$2
+  lvim $1/$1.$2 || nvim $1/$1.$2
   else
     mkdir $1
-    touch $1.$2
-    lvim $1.$2 || nvim $1.$2
+    touch $1/$1.$2
+    lvim $1/$1.$2 || nvim $1/$1.$2
 fi
 
