@@ -8,7 +8,7 @@
 # E.G:
 # g example go --> ./example/example.go
 # g examply py--> ./example/example.py
-
+# Makes test_example.py for pytesting
 if [ "$#" -ne 2 ]; then
   echo "you forgot the filename or something"
   exit 1
