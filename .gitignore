@@ -1,0 +1,8 @@
+# Python temp files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+/__pycache
+
+.DS_Store
