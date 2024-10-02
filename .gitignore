@@ -3,6 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
-/__pycache
-/.venv
+__pycache
+.venv/
 .DS_Store
