@@ -1,0 +1,2 @@
+run:
+	@python stopwatch.py
