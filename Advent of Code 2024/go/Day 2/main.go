@@ -23,8 +23,8 @@ func main() {
 	for scanner.Scan() {
 		reports := convert(scanner.Text())
 
-		if !isConsistent(reports) || !isValidAsc(reports) || !isValidDes(reports) {
-			permutations := createPermutations(reports)
+		if !isConsistent(reports) || (!isValidAsc(reports) || !isValidDes(reports)) { //part 1
+			permutations := createPermutations(reports) // part 2
 			for _, report := range permutations {
 				if !isConsistent(report) || !isValidAsc(report) || !isValidDes(report) {
 					continue
