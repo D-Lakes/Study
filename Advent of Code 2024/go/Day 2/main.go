@@ -26,13 +26,7 @@ func main() {
 		if !isConsistent(reports) || !isValidAsc(reports) || !isValidDes(reports) {
 			permutations := createPermutations(reports)
 			for _, report := range permutations {
-				if !isConsistent(report) {
-					continue
-				}
-				if !isValidAsc(report) {
-					continue
-				}
-				if !isValidDes(report) {
+				if !isConsistent(report) || !isValidAsc(report) || !isValidDes(report) {
 					continue
 				}
 				count += 1
