@@ -42,10 +42,10 @@ func main() {
 
 	var transposedMatrix [140][140]byte
 	for i := 0; i < 140; i++ {
-		for j := 0; j <= 140; j++ {
+		for j := 0; j < 140; j++ {
 			b, _ := reader.ReadByte()
 			if b == 10 { // Newline character
-				continue
+				j--
 			} else {
 				transposedMatrix[j][i] = b
 			}
